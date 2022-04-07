@@ -1,9 +1,45 @@
-body, a {
+* {
+  box-sizing: border-box;
+}
+
+body,
+a {
   background-color: #252525;
   font-family: monospace;
   color: #fafafa;
 }
 
+.h1 {
+    font-size: 25px;
+    font-weight: bold;
+    display: block;
+    margin: 15px 0;
+}
+
+.h2 {
+    font-size: 21px;
+    font-weight: bold;
+    display: block;
+    margin: 15px 0;
+}
+
+div {
+  margin: 10px 0;
+}
+
 img {
   width: 20%;
+  margin-top: 10px;
+}
+
+.botao {
+  border: 1px solid #fafafa;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+figure {
+  margin: 0;
 }
