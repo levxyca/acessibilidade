@@ -3,6 +3,7 @@
 💫 Projeto manipulado durante palestra sobre: A importância da acessibilidade e como introduzir isso para dentro dos nossos projetos com HTML.
 
 [Slides da palestra](https://www.canva.com/design/DAE9P0DohwE/6G5y2SQ90fB4QstZcbi2vQ/view)
+[Vídeo da palestra](https://www.twitch.tv/videos/1461190043)
 
 ## Tabela de conteúdos
 
