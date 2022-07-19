@@ -6,6 +6,8 @@
 
 [Vídeo da palestra](https://www.twitch.tv/videos/1461190043)
 
+[Vídeo demonstração com a leitor de tela nas duas páginas](https://www.veed.io/view/496892fa-2395-4760-9669-021a7e80d4f7)
+
 ## Tabela de conteúdos
 
 [1. Guias de Acessibilidade](#guias-de-acessibilidade)
