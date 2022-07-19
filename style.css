@@ -10,17 +10,21 @@ a {
 }
 
 .h1 {
-    font-size: 25px;
-    font-weight: bold;
-    display: block;
-    margin: 15px 0;
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin: 15px 0;
 }
 
 .h2 {
-    font-size: 21px;
-    font-weight: bold;
-    display: block;
-    margin: 15px 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: block;
+  margin: 15px 0;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
 }
 
 div {
@@ -29,15 +33,21 @@ div {
 
 img {
   width: 20%;
-  margin-top: 10px;
 }
 
 .botao {
-  border: 1px solid #fafafa;
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
   cursor: pointer;
+  padding: 1px 6px;
+  text-align: center;
+  border-width: 2px;
+  border-color: buttonborder;
+  background-color: buttonface;
+  color: buttontext;
+  font-family: Arial;
+  font-size: 13.3333px;
 }
 
 figure {
