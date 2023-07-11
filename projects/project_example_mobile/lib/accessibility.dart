@@ -10,7 +10,7 @@ class Accessibility extends StatelessWidget {
         appBar: AppBar(
           title: const Center(
             child: Text(
-              'Accessibility on mobile devices',
+              'Acessibilidade em dispositivos móveis',
             ),
           ),
         ),
@@ -22,17 +22,20 @@ class Accessibility extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'How it works?',
+                    'Como isso funciona?',
+                    semanticsLabel: 'Título da seção: Como isso funciona?',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Card(
-                    color: Colors.blue,
+                    color: Color.fromRGBO(0, 112, 153, 10),
                     margin: EdgeInsets.zero,
                     child: Text(
-                      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industries standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+                      'Teste de leitor de tela: O leitor de tela deve ser capaz de descrever todos os controles na página quando são tocados, e as descrições devem ser compreensíveis. Teste o seu aplicativo com o TalkBack (Android) e o VoiceOver (iOS).',
+                      semanticsLabel:
+                          'Um card de cor azul com a seguinte explicação: Teste de leitor de tela: O leitor de tela deve ser capaz de descrever todos os controles na página quando são tocados, e as descrições devem ser compreensíveis. Teste o seu aplicativo com o TalkBack (Android) e o VoiceOver (iOS).',
                     ),
                   ),
                 ],
@@ -44,7 +47,7 @@ class Accessibility extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    'Image gallery',
+                    'Galeria de Imagem',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
@@ -54,17 +57,26 @@ class Accessibility extends StatelessWidget {
                   Image.asset(
                     'assets/images/cat.jpg',
                     semanticLabel:
-                        'A white cat with gray spots that come out around the eyes and up the head that is turned slightly to the left with a white butterfly with thin orange lines and black outline with small orange spots above its nose.',
+                        'Uma imagem de um gato branco com manchas cinzas que se destacam ao redor dos olhos e na cabeça, que está levemente virada para a esquerda. Ao lado do gato, há uma borboleta branca com linhas finas laranjas e contorno preto, com pequenas manchas laranjas acima do nariz.',
                   ),
                 ],
               ),
             ),
             const SizedBox(height: 24),
             Semantics(
-              label: 'Go to back',
+              liveRegion: true,
+              label: 'Voltar para a tela inicial.',
               child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromRGBO(0, 112, 153, 10),
+                ),
                 onPressed: () => Navigator.pop(context),
-                child: const Text('Go to back'),
+                child: const Text(
+                  'Voltar',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
               ),
             ),
           ],

@@ -4,7 +4,7 @@ import 'accessibility.dart';
 void main() {
   runApp(
     const MaterialApp(
-      title: 'Accessibility',
+      title: 'Acessibilidade',
       home: MyApp(),
     ),
   );
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
             color: Colors.blue,
             child: const Center(
               child: Text(
-                'Accessibility on mobile devices',
+                'Acessibilidade em dispositivos móveis',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontSize: 20,
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
         padding: const EdgeInsets.all(24),
         children: [
           const Text(
-            'How it works?',
+            'Como isso funciona?',
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
@@ -53,12 +53,12 @@ class MyApp extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(4)),
             ),
             child: const Text(
-              'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industries standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+              'Teste de leitor de tela: O leitor de tela deve ser capaz de descrever todos os controles na página quando são tocados, e as descrições devem ser compreensíveis. Teste o seu aplicativo com o TalkBack (Android) e o VoiceOver (iOS).',
             ),
           ),
           const SizedBox(height: 16),
           const Text(
-            'Image gallery',
+            'Galeria de Imagem',
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
@@ -78,7 +78,7 @@ class MyApp extends StatelessWidget {
               ),
               child: const Center(
                 child: Text(
-                  'Navigate to Accessibility',
+                  'Acessar a página com acessibilidade.',
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w500,
