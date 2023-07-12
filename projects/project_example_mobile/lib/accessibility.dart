@@ -32,10 +32,16 @@ class Accessibility extends StatelessWidget {
                   Card(
                     color: Color.fromRGBO(0, 112, 153, 10),
                     margin: EdgeInsets.zero,
-                    child: Text(
-                      'Teste de leitor de tela: O leitor de tela deve ser capaz de descrever todos os controles na página quando são tocados, e as descrições devem ser compreensíveis. Teste o seu aplicativo com o TalkBack (Android) e o VoiceOver (iOS).',
-                      semanticsLabel:
-                          'Um card de cor azul com a seguinte explicação: Teste de leitor de tela: O leitor de tela deve ser capaz de descrever todos os controles na página quando são tocados, e as descrições devem ser compreensíveis. Teste o seu aplicativo com o TalkBack (Android) e o VoiceOver (iOS).',
+                    child: Padding(
+                      padding: EdgeInsets.all(4),
+                      child: Text(
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                        'Teste de leitor de tela: O leitor de tela deve ser capaz de descrever todos os controles na página quando são tocados, e as descrições devem ser compreensíveis. Teste o seu aplicativo com o TalkBack (Android) e o VoiceOver (iOS).',
+                        semanticsLabel:
+                            'Um card de cor azul com a seguinte explicação: Teste de leitor de tela: O leitor de tela deve ser capaz de descrever todos os controles na página quando são tocados, e as descrições devem ser compreensíveis. Teste o seu aplicativo com o TalkBack (Android) e o VoiceOver (iOS).',
+                      ),
                     ),
                   ),
                 ],
@@ -47,6 +53,7 @@ class Accessibility extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
+                    semanticsLabel: 'Título da seção: Galeria de Imagem',
                     'Galeria de Imagem',
                     style: TextStyle(
                       fontSize: 24,

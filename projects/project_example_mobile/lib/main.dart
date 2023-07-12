@@ -78,7 +78,7 @@ class MyApp extends StatelessWidget {
               ),
               child: const Center(
                 child: Text(
-                  'Acessar a página com acessibilidade.',
+                  'Acessibilidade',
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w500,
