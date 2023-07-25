@@ -61,24 +61,32 @@
 
 > Informações encontradas na documentação do Flutter em [Accessibility release checklist](https://docs.flutter.dev/accessibility-and-localization/accessibility?tab=desktop#accessibility-release-checklist)
 
-- **Interações ativas**: certifique-se de que todas as interações ativas realizem alguma ação. Qualquer botão que possa ser pressionado deve fazer algo quando pressionado. Por exemplo, se você tem um callback sem efeito para um evento onPressed, altere-o para mostrar um SnackBar na tela explicando qual controle você acabou de pressionar.
-- **Teste de leitor de tela**: o leitor de tela deve ser capaz de descrever todos os controles na página quando você toca neles, e as descrições devem ser compreensíveis. Teste seu aplicativo com o TalkBack (Android) e o VoiceOver (iOS).
-- **Relação de contraste**: ter uma relação de contraste de pelo menos 4,5:1 entre os controles ou texto e o plano de fundo, com exceção dos componentes desabilitados. As imagens também devem ser verificadas quanto a contraste suficiente.
-- **Troca de contexto**: nada deve mudar automaticamente o contexto do usuário enquanto ele digita informações. Geralmente, os widgets devem evitar mudar o contexto do usuário sem algum tipo de ação de confirmação.
-- **Alvos tocáveis**: todos os alvos tocáveis devem ter pelo menos 48x48 pixels.
-- **Erros**: ações importantes devem poder ser desfeitas. Em campos que mostram erros, sugira uma correção, se possível.
-- **Teste de deficiência de visão de cores**: os controles devem ser utilizáveis e legíveis nos modos de visão de cores deficientes e em escala de cinza.
-- **Fatores de escala**: a interface do usuário deve permanecer legível e utilizável em fatores de escala muito grandes para tamanho de texto e escalonamento de exibição.
+- **Interações ativas**: verifique se todas as ações interativas realizam alguma função. Certifique-se de que os botões façam algo quando pressionados. Por exemplo, se você tem um botão que não faz nada quando pressionado, altere-o para mostrar uma mensagem explicando o que aconteceu.
+- **Leitor de tela**: o leitor de tela deve ser capaz de descrever todos os controles na página quando você toca neles, e as descrições devem ser compreensíveis. Teste seu aplicativo com o [TalkBack](https://support.google.com/accessibility/android/answer/6007100?hl=pt-BR) (Android) e o [VoiceOver](https://support.apple.com/pt-br/guide/iphone/iph3e2e415f/ios) (iOS).
+- **Relação de contraste**: verifique se existe um contraste adequado entre os controles e o plano de fundo. Certifique-se de que a relação de contraste seja de pelo menos 4,5:1 para garantir a legibilidade. Isso é especialmente importante para pessoas com dificuldades de visão.
+- **Troca de contexto**: nada deve mudar automaticamente o contexto do usuário enquanto ele digita informações. Mudanças bruscas podem confundir o usuário. Sempre forneça confirmação ou aviso antes de fazer alterações importantes.
+- **Alvos tocáveis**: todos os alvos tocáveis devem ter pelo menos 48x48 pixels. Isso torna mais fácil para as pessoas usuárias tocarem os elementos na tela.
+- **Erros**: garanta que ações importantes possam ser desfeitas. Se houver erros, forneça sugestões de correção sempre que possível, para ajudar os usuários a resolverem problemas.
+- **Inversão de cores e escala de cinza**: os controles devem ser utilizáveis e legíveis nos modos de visão de cores deficientes e em escala de cinza.
+- **Fatores de escala**: a interface do usuário deve permanecer legível e utilizável mesmo em tamanhos de texto muito grandes ou em escalas de exibição diferentes.
 
 ### Testes automatizados
 
-Podemos testar alguns dos itens da lista de verificação de acessibilidade de forma automatizada usando o [Accessibility Scanner](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=en).
+Testes automatizados são procedimentos de verificação de software executados automaticamente por programas de computador, em vez de serem feitos manualmente por pessoas. Eles garantem que um programa ou aplicativo funcionem corretamente, identificando erros e falhas de forma eficiente.
 
-O Accessibility Scanner é uma ferramenta que analisa a interface do usuário de um aplicativo e fornece recomendações sobre como melhorar a acessibilidade do aplicativo.
+Ao seguir um conjunto de instruções pré-programadas, esses testes verificam se todas as partes do software estão trabalhando adequadamente. Caso algum problema seja encontrado, as pessoas desenvolvedoras podem corrigi-lo antes que o software seja entregue ass pessoas que vão utilizá-lo, assegurando uma melhor qualidade e confiabilidade do produto final.
 
-O Accessibility Scanner permite que qualquer pessoa, não apenas desenvolvedores, identifique rapidamente e facilmente uma série de melhorias comuns de acessibilidade; por exemplo, aumentar o tamanho de alvos de toque pequenos, aumentar o contraste para texto e imagens e fornecer descrições de conteúdo para elementos gráficos sem rótulo.
+Em resumo, os testes automatizados são uma ferramenta valiosa no desenvolvimento de software, pois ajudam a garantir a funcionalidade adequada do programa e a identificar problemas de forma rápida e sistemática, economizando tempo e esforço de quem desenvolve e melhorando a experiência de quem utiliza.
 
-### Teste seu aplicativo usando a API de Diretrizes de Acessibilidade do Flutter
+#### Accessibility Scanner
+
+Podemos testar alguns dos itens da lista de verificação de acessibilidade de forma automatizada no android usando o [Accessibility Scanner](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=en).
+
+O Accessibility Scanner é uma ferramenta que analisa a interface de um aplicativo e fornece recomendações sobre como melhorar sua acessibilidade.
+
+O Accessibility Scanner permite que qualquer pessoa, não apenas pessoas desenvolvedoras, identifiquem, rapidamente e facilmente, uma série de melhorias comuns de acessibilidade; como, por exemplo, aumentar o tamanho de alvos de toque pequenos, aumentar o contraste para texto e imagens e fornecer descrições de conteúdo para elementos gráficos sem rótulo.
+
+#### Teste seu aplicativo usando a API de Diretrizes de Acessibilidade do Flutter
 
 Esta API verifica se a interface do seu aplicativo atende às recomendações de acessibilidade do Flutter. Essas recomendações incluem contraste de texto, tamanho do alvo e rótulos de alvo.
 
